@@ -3,11 +3,12 @@ const csvFile = document.getElementById("csvFile");
 const table = document.getElementById("results");
 const tableHead = document.getElementById("headings");
 const sel1 = document.getElementById("Name1");
-const sel2 = document.getElementById("Name2");
+const kInput = document.getElementById("KNN");
 const compareBtn = document.getElementById("compare");
 const resultTxt = document.getElementById("result");
 let isAsc = false;
 let datos;
+let currName;
 
 function csvToArray(str, delimiter = ",") {
     // slice from start of text to the first \n index
@@ -39,8 +40,14 @@ function csvToArray(str, delimiter = ",") {
     for (let e of data) {
       let row = table.insertRow();
       for (k in e) {
+        let text = "";
         let cell = row.insertCell();
-        let text = document.createTextNode(e[k]);
+        if(e[k].length<=2){
+
+          text = document.createTextNode((e[k])/10);
+        }else{
+          text = document.createTextNode(e[k]);
+        }
         cell.appendChild(text);
       }
     }
@@ -84,33 +91,56 @@ sortResults(attr);
 
 compareBtn.addEventListener("click", function(){
 let name1 = sel1.options[sel1.selectedIndex].text;
-let name2 = sel2.options[sel2.selectedIndex].text;
+let k = kInput.value;
 let Obj1 =[];
-let Obj2 = [];
 for(var i = 0; i < datos.length; i++) {
   if(name1===datos[i].Nombres){
   Obj1 = datos[i];
   }
 }
-for(var i = 0; i < datos.length; i++) {
-  if(name2===datos[i].Nombres){
-   Obj2 = datos[i];
-  }
-}
 let Arr1 = Object.values(Obj1);
-let Arr2 = Object.values(Obj2);
 let Arr1s = Arr1.splice(1);
-let Arr2s = Arr2.splice(1);
-let result = cosineSimil(Arr1s,Arr2s);
-if(result>=0.99){
-resultTxt.innerHTML = "La similitud coseno es: 1<br>¡Increíble, estas dos personas son como almas gemelas!";
-}else{
-  resultTxt.innerHTML = `La similitud coseno es: ${result}`;
-};
+currName=0;
+let cosineArr =[];
+while(currName<datos.length){
+  let Obj2 = [];
+  
+  for(var i = 0; i < datos.length; i++) {
+    if(i===currName){
+     Obj2 = datos[i];
+    }
+  }
+  
+  let Arr2 = Object.values(Obj2);
+  let Arr2s = Arr2.splice(1);
+  let result = [Arr2[0],cosineSimil(Arr1s,Arr2s)];
+cosineArr.push(result);
+currName++;
+}
+console.log(cosineArr);
+//QUITARLE LA SIMILITUD COSENO PROPIA
+for (let i = 0; i < cosineArr.length; i++) {
+  if(cosineArr[i][1]>=0.99){
+    cosineArr.splice(i,1);
+    }
+  
+}
+let orderedCosineArr = cosineArr.sort((a,b)=> b[1]-a[1])
+let KNNArr = orderedCosineArr.splice(0,k);
+let names="";
+index = 1;
+KNNArr.forEach(element => {
+  let name = `<br>${index}.${element[0]}, con una distancia de ${1-element[1]}`;
+  index++;
+  names+=name;
 });
+resultTxt.innerHTML=`Los ${k} vecinos más cercanos de ${name1}, por orden de cercanía, son:${names}`
+console.log(KNNArr);
+});
+
 function cosineSimil(Arr1,Arr2){
   let d = dotProduct(Arr1,Arr2);
-  let m1 = magnitude(Arr1);
+  let m1 = magnitude(Arr1); 
   let m2 = magnitude(Arr2);
   let result = d/(m1*m2);
   return result;
@@ -150,12 +180,6 @@ for(var i = 0; i < datos.length; i++) {
   opt.innerHTML = datos[i].Nombres;
   opt.value  = datos[i].Nombres;
   sel1.appendChild(opt);
-}
-for(var i = 0; i < datos.length; i++) {
-  var opt = document.createElement('option');
-  opt.innerHTML = datos[i].Nombres;
-  opt.value  = datos[i].Nombres;
-  sel2.appendChild(opt);
 }
   }
 

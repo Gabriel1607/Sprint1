@@ -18,11 +18,16 @@
         <thead id="headings">
             <tr>
                 <th id="Nombres">Nombre</th>
-                <th id="DMI">DMI 0-1</th>
-                <th id="Hamburguesa">Hamburguesa 0-1</th>
-                <th id="Helado">Helado 0-1</th>
-                <th id="Videojuego">Videojuegos 0-1</th>
-                <th id="Feliz">Felicidad 0-1</th>
+                <th id="PIÑA">Piña</th>
+                <th id="TOCINETA">Tocineta</th>
+                <th id="MADURO">Maduro</th>
+                <th id="MAIZ">Maíz</th>
+                <th id="JAMON">Jamón</th>
+                <th id="POLLO">Pollo</th>
+                <th id="CHORIZO">Chorizo</th>
+                <th id="PEPPERONI">Pepperoni</th>
+                <th id="CHAMPIÑON">Champiñón</th>
+                <th id="TOMATE">Tomate</th>
             </tr>
         </thead>
         <tbody id="results">
@@ -30,9 +35,9 @@
         </tbody>
     </table>
     <select id="Name1"></select>
-    <select id="Name2"></select>
-    <button id="compare">COMPARAR</button>
-    <p id="result">Selecciona dos nombres y haz click para conocer su similitud coseno.</p>
+    <input id="KNN" type="number" placeholder="Ingresa el K">
+    <button id="compare">Calcular KNN</button>
+    <p id="result">Selecciona un nombre, ingresa un K y haz click para conocer sus K vecinos más cercanos.</p>
 </body>
 
 <script src="main.js"></script>
