@@ -16,14 +16,14 @@
         <form id="myForm">
             <span>Base de datos de Usuarios</span>
             <input type="file" id="csvFile" accept=".csv"/>
-            <input type="submit" value="Subir" />
+            <input type="submit" value="Subir" id="submitButton"/>
             <br>
         </form>
         <form id="songForm">
             <span>Base de datos de Canciones</span>
             <input type="file" id="songFile" accept=".csv"/>
             
-            <input type="submit" value="Subir" />
+            <input type="submit" value="Subir" id="submitButton"/>
         </form>
         <span id="confirm">Base de datos subida correctamente</span>
     </header>
@@ -54,7 +54,7 @@
 
         <div id="knn">
             <select id="Name1"></select>
-            <input id="KNN" type="number" placeholder="Ingresa el K">
+            <input id="KNN" type="number" placeholder="K">
             <button id="compare">Calcular KNN</button>
             <p id="knnResult">Selecciona un nombre, ingresa un K y haz click para conocer sus K vecinos más cercanos.</p>
         </div>

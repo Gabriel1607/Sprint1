@@ -1,15 +1,43 @@
 body{
     font-family: 'Raleway', sans-serif;
+    background-color: rgb(15, 15, 15);
+    color: whitesmoke;
 }
 
 header{
+    padding: 10px 20px;
 
     form{
         margin: 20px 0 10px;
-    }
 
-    span{
-        margin: 0 0 40px;
+        input{
+            padding: 5px;
+
+            background-color: transparent;
+
+            color: whitesmoke;
+
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+        }
+
+        input:hover{
+            cursor: pointer;
+            background-color: #232323;
+            border-radius: 20px;
+        }
+
+        #submitButton{
+            height: 36px;
+            font-size: medium;
+        }
+
+        #submitButton:hover{
+            font-family: 'Fredoka One', cursive;
+
+            border: 1px solid whitesmoke;
+            padding: 0 10px;
+        }
     }
     
     p{
@@ -17,42 +45,122 @@ header{
     }
 
     #confirm{
-        color: green;
+        color: lightgreen;
         display: none;
     }
 }
 
 main{
+    margin-top: 50px;
+    padding: 10px 20px;
+
     table {
-        margin: 3px;
-    }
+        margin: 10px 0;
+
+        th {
+            font-size: large;
+            font-weight: 500;
+            padding: 5px;
+            width: fit-content;
+            height: 25px;
+        }
+        
+        th:hover{
+            cursor: pointer;
+            font-family: 'Fredoka One', cursive;
+        }
+        
+        th, td {
+            padding: 5px;
+            background-color: rgb(41, 41, 41);
     
-    table th {
-        font-size: large;
-        font-weight: 500;
-        padding: 5px;
-        width: fit-content;
+            border-radius: 5px;
+        }
+        
+        td{
+            font-weight: 300;
+        }
     }
+
+    div{
+        margin: 10px 0;
+
+        select{
+            margin-right: 30px;
+
+            padding: 5px;
+            background-color: rgb(41, 41, 41);
     
-    table th:hover{
-        cursor: pointer;
-        font-family: 'Fredoka One', cursive;
-    }
+            border-radius: 5px;
+
+            color: whitesmoke;
+
+            option{
+                font-family: 'Raleway', sans-serif;
+            }
+        }
+
+        select:hover{
+            cursor: pointer;
+        }
+
+        input{
+            margin-right: 30px;
+
+            width: 50px;
+            
+            padding: 5px;
+            background-color: rgb(41, 41, 41);
     
-    table th, table td {
-        padding: 3px;
-        border: 1px solid #000;
-    }
-    
-    table td{
-        font-weight: 300;
-    }
-    
-    #knn{
-         
+            border-radius: 5px;
+
+            color: whitesmoke;
+        }
+
+        input:hover{
+            cursor: pointer;
+        }
+
+        button{            
+            padding: 5px;
+
+            background-color: transparent;
+
+            color: whitesmoke;
+
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+
+            height: 36px;
+            font-size: medium;
+        }
+
+        button:hover{
+            cursor: pointer;
+            background-color: #232323;
+            border-radius: 20px;
+            border: 1px solid whitesmoke;
+            padding: 0 10px;
+        }
+
+        p{
+            margin: 10px 0;
+        }
     }
     
     #recommend{
-        margin: 3px
+        height: 36px;
+        margin: 10px 0;
+        padding: 5px;
+        background-color: transparent;
+        font-size: medium;
+    }
+
+    #recommend:hover{
+        cursor: pointer;
+            background-color: #232323;
+            border-radius: 20px;
+            border: 1px solid whitesmoke;
+            padding: 0 10px;
     }
 }
