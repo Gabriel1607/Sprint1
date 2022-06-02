@@ -1,18 +1,52 @@
-table {
-    margin: 3px;
+body {
+  font-family: 'Raleway', sans-serif;
 }
-table th {
-    font-weight: bold;
-    cursor: pointer;
+
+header form {
+  margin: 20px 0 10px;
 }
-table th, table td {
-    padding: 3px;
-    border: 1px solid #000;
+
+header span {
+  margin: 0 0 40px;
 }
-#confirm{
-    color: green;
-    display: none;
+
+header p {
+  margin: 50px 0 10px;
 }
-#knn{
-    display: none;   
+
+header #confirm {
+  color: green;
+  display: none;
 }
+
+main table {
+  margin: 3px;
+}
+
+main table th {
+  font-size: large;
+  font-weight: 500;
+  padding: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+main table th:hover {
+  cursor: pointer;
+  font-family: 'Fredoka One', cursive;
+}
+
+main table th, main table td {
+  padding: 3px;
+  border: 1px solid #000;
+}
+
+main table td {
+  font-weight: 300;
+}
+
+main #recommend {
+  margin: 3px;
+}
+/*# sourceMappingURL=styles.css.map */

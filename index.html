@@ -4,55 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Raleway:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Database sorter</title>
 </head>
-<body>
-    <form id="myForm">
-        <span>Base de datos de Usuarios</span>
-        <input type="file" id="csvFile" accept=".csv"/>
-        <input type="submit" value="Subir" />
-        <br>
-    </form>
-    <form id="songForm">
-        <span>Base de datos de Canciones</span>
-        <input type="file" id="songFile" accept=".csv"/>
-        
-        <input type="submit" value="Subir" />
-    </form>
-    <span id="confirm">Base de datos subida correctamente</span>
-      <p>Haz click en el título de una columna para organizarla</p>
-      <table>
-        <thead id="headings">
-            <tr>
-                <th id="Nombre">Nombre</th>
-                <th id="Rock">Rock</th>
-                <th id="Urbano">Urbano</th>
-                <th id="Latino">Latino</th>
-                <th id="R&B">R&B</th>
-                <th id="Pop">Pop</th>
-                <th id="Instrumental">Instrumental</th>
-                <th id="Electrónica">Electrónica</th>
-                <th id="Duración">Duración</th>
-                <th id="Animadas">Animadas</th>
-                <th id="Alegres">Alegres</th>
-                <th id="Letra">Letra</th>
-                <th id="Conocidas">Conocidas</th>
-            </tr>
-        </thead>
-        <tbody id="results">
-           
-        </tbody>
-    </table>
-    <div id="knn">
-        <select id="Name1"></select>
-        <input id="KNN" type="number" placeholder="Ingresa el K">
-        <button id="compare">Calcular KNN</button>
-        <p id="knnResult">Selecciona un nombre, ingresa un K y haz click para conocer sus K vecinos más cercanos.</p>
-    </div>
-    <input type="button" value="🤡" id="recommend">
-    <audio id="audio" src="clown.mp3"></audio>
-</body>
 
+<body>
+    <header>
+        <form id="myForm">
+            <span>Base de datos de Usuarios</span>
+            <input type="file" id="csvFile" accept=".csv"/>
+            <input type="submit" value="Subir" />
+            <br>
+        </form>
+        <form id="songForm">
+            <span>Base de datos de Canciones</span>
+            <input type="file" id="songFile" accept=".csv"/>
+            
+            <input type="submit" value="Subir" />
+        </form>
+        <span id="confirm">Base de datos subida correctamente</span>
+    </header>
+
+    <main>
+        <p>Haz click en el título de una columna para organizarla</p>
+        <table>
+            <thead id="headings">
+                <tr>
+                    <th id="Nombre">Nombre</th>
+                    <th id="Rock">Rock</th>
+                    <th id="Urbano">Urbano</th>
+                    <th id="Latino">Latino</th>
+                    <th id="R&B">R&B</th>
+                    <th id="Pop">Pop</th>
+                    <th id="Instrumental">Instrumental</th>
+                    <th id="Electrónica">Electrónica</th>
+                    <th id="Duración">Duración</th>
+                    <th id="Animadas">Animadas</th>
+                    <th id="Alegres">Alegres</th>
+                    <th id="Letra">Letra</th>
+                    <th id="Conocidas">Conocidas</th>
+                </tr>
+            </thead>
+            <tbody id="results">
+            </tbody>
+        </table>
+
+        <div id="knn">
+            <select id="Name1"></select>
+            <input id="KNN" type="number" placeholder="Ingresa el K">
+            <button id="compare">Calcular KNN</button>
+            <p id="knnResult">Selecciona un nombre, ingresa un K y haz click para conocer sus K vecinos más cercanos.</p>
+        </div>
+        <input type="button" value="🤡" id="recommend">
+        <audio id="audio" src="clown.mp3"></audio>
+    </main>
+
+</body>
 <script src="main.js"></script>
 </html>
