@@ -9,35 +9,49 @@
 </head>
 <body>
     <form id="myForm">
-        <input type="file" id="csvFile" accept=".csv" />
-        <br />
+        <span>Base de datos de Usuarios</span>
+        <input type="file" id="csvFile" accept=".csv"/>
         <input type="submit" value="Subir" />
-      </form>
+        <br>
+    </form>
+    <form id="songForm">
+        <span>Base de datos de Canciones</span>
+        <input type="file" id="songFile" accept=".csv"/>
+        
+        <input type="submit" value="Subir" />
+    </form>
+    <span id="confirm">Base de datos subida correctamente</span>
       <p>Haz click en el título de una columna para organizarla</p>
       <table>
         <thead id="headings">
             <tr>
-                <th id="Nombres">Nombre</th>
-                <th id="PIÑA">Piña</th>
-                <th id="TOCINETA">Tocineta</th>
-                <th id="MADURO">Maduro</th>
-                <th id="MAIZ">Maíz</th>
-                <th id="JAMON">Jamón</th>
-                <th id="POLLO">Pollo</th>
-                <th id="CHORIZO">Chorizo</th>
-                <th id="PEPPERONI">Pepperoni</th>
-                <th id="CHAMPIÑON">Champiñón</th>
-                <th id="TOMATE">Tomate</th>
+                <th id="Nombre">Nombre</th>
+                <th id="Rock">Rock</th>
+                <th id="Urbano">Urbano</th>
+                <th id="Latino">Latino</th>
+                <th id="R&B">R&B</th>
+                <th id="Pop">Pop</th>
+                <th id="Instrumental">Instrumental</th>
+                <th id="Electrónica">Electrónica</th>
+                <th id="Duración">Duración</th>
+                <th id="Animadas">Animadas</th>
+                <th id="Alegres">Alegres</th>
+                <th id="Letra">Letra</th>
+                <th id="Conocidas">Conocidas</th>
             </tr>
         </thead>
         <tbody id="results">
            
         </tbody>
     </table>
-    <select id="Name1"></select>
-    <input id="KNN" type="number" placeholder="Ingresa el K">
-    <button id="compare">Calcular KNN</button>
-    <p id="result">Selecciona un nombre, ingresa un K y haz click para conocer sus K vecinos más cercanos.</p>
+    <div id="knn">
+        <select id="Name1"></select>
+        <input id="KNN" type="number" placeholder="Ingresa el K">
+        <button id="compare">Calcular KNN</button>
+        <p id="knnResult">Selecciona un nombre, ingresa un K y haz click para conocer sus K vecinos más cercanos.</p>
+    </div>
+    <input type="button" value="🤡" id="recommend">
+    <audio id="audio" src="clown.mp3"></audio>
 </body>
 
 <script src="main.js"></script>

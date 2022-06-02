@@ -9,3 +9,10 @@ table th, table td {
     padding: 3px;
     border: 1px solid #000;
 }
+#confirm{
+    color: green;
+    display: none;
+}
+#knn{
+    display: none;   
+}
