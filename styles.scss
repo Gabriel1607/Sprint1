@@ -1,11 +1,21 @@
+$color-amarillo: #F6D83E;
+$color-rosado: #F57AAA;
+$color-verde: #56EB9B;
+$color-negro: #2C2C2C;
+
+html{
+    position: relative;
+}
+
+
 body{
     font-family: 'Raleway', sans-serif;
-    background-color: rgb(15, 15, 15);
-    color: whitesmoke;
+    background-color: white;
+    color: $color-negro;
 }
 
 header{
-    padding: 10px 20px;
+    padding: 10px 0 10px 167px;
 
     form{
         margin: 20px 0 10px;
@@ -14,8 +24,9 @@ header{
             padding: 5px;
 
             background-color: transparent;
+            border-color: transparent;
 
-            color: whitesmoke;
+            color: $color-negro;
 
             font-family: 'Raleway', sans-serif;
             font-weight: 500;
@@ -23,7 +34,7 @@ header{
 
         input:hover{
             cursor: pointer;
-            background-color: #232323;
+            background-color: $color-amarillo;
             border-radius: 20px;
         }
 
@@ -33,9 +44,7 @@ header{
         }
 
         #submitButton:hover{
-            font-family: 'Fredoka One', cursive;
-
-            border: 1px solid whitesmoke;
+            border: 1px solid $color-amarillo;
             padding: 0 10px;
         }
     }
@@ -45,14 +54,14 @@ header{
     }
 
     #confirm{
-        color: lightgreen;
+        color: $color-verde;
         display: none;
     }
 }
 
 main{
     margin-top: 50px;
-    padding: 10px 20px;
+    padding: 10px 0 10px 167px;
 
     table {
         margin: 10px 0;
@@ -63,6 +72,8 @@ main{
             padding: 5px;
             width: fit-content;
             height: 25px;
+
+            background-color: $color-rosado;
         }
         
         th:hover{
@@ -72,13 +83,13 @@ main{
         
         th, td {
             padding: 5px;
-            background-color: rgb(41, 41, 41);
-    
             border-radius: 5px;
         }
         
         td{
             font-weight: 300;
+
+            background-color: $color-amarillo;
         }
     }
 
@@ -89,11 +100,13 @@ main{
             margin-right: 30px;
 
             padding: 5px;
-            background-color: rgb(41, 41, 41);
-    
-            border-radius: 5px;
 
-            color: whitesmoke;
+            border-color: transparent;
+
+            color: $color-negro;
+
+            height: 36px;
+            font-size: medium;
 
             option{
                 font-family: 'Raleway', sans-serif;
@@ -102,6 +115,9 @@ main{
 
         select:hover{
             cursor: pointer;
+            background-color: $color-amarillo;
+            border-radius: 20px;
+            padding: 5px 10px;
         }
 
         input{
@@ -110,23 +126,26 @@ main{
             width: 50px;
             
             padding: 5px;
-            background-color: rgb(41, 41, 41);
-    
-            border-radius: 5px;
 
-            color: whitesmoke;
+            border-color: transparent;
+
+            color: $color-negro;
         }
 
         input:hover{
             cursor: pointer;
+            background-color: $color-amarillo;
+            border-radius: 30px;
+            padding: 5px 10px;
         }
 
         button{            
             padding: 5px;
 
             background-color: transparent;
+            border-color: transparent;
 
-            color: whitesmoke;
+            color: $color-negro;
 
             font-family: 'Raleway', sans-serif;
             font-weight: 500;
@@ -137,9 +156,9 @@ main{
 
         button:hover{
             cursor: pointer;
-            background-color: #232323;
+            background-color: $color-amarillo;
+            border-color: transparent;
             border-radius: 20px;
-            border: 1px solid whitesmoke;
             padding: 0 10px;
         }
 
@@ -153,14 +172,28 @@ main{
         margin: 10px 0;
         padding: 5px;
         background-color: transparent;
+        border-color: transparent;
         font-size: medium;
     }
 
     #recommend:hover{
         cursor: pointer;
-            background-color: #232323;
+            background-color: $color-amarillo;
             border-radius: 20px;
-            border: 1px solid whitesmoke;
             padding: 0 10px;
+    }
+}
+
+.background{
+
+    &__bar{
+        position: absolute;
+        top: 0;
+    }
+
+    &__dots{
+        position: absolute;
+        right: 20px;
+        bottom: 30px;
     }
 }

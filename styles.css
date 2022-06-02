@@ -1,11 +1,15 @@
+html {
+  position: relative;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
-  background-color: #0f0f0f;
-  color: whitesmoke;
+  background-color: white;
+  color: #2C2C2C;
 }
 
 header {
-  padding: 10px 20px;
+  padding: 10px 0 10px 167px;
 }
 
 header form {
@@ -15,14 +19,15 @@ header form {
 header form input {
   padding: 5px;
   background-color: transparent;
-  color: whitesmoke;
+  border-color: transparent;
+  color: #2C2C2C;
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
 }
 
 header form input:hover {
   cursor: pointer;
-  background-color: #232323;
+  background-color: #F6D83E;
   border-radius: 20px;
 }
 
@@ -32,8 +37,7 @@ header form #submitButton {
 }
 
 header form #submitButton:hover {
-  font-family: 'Fredoka One', cursive;
-  border: 1px solid whitesmoke;
+  border: 1px solid #F6D83E;
   padding: 0 10px;
 }
 
@@ -42,13 +46,13 @@ header p {
 }
 
 header #confirm {
-  color: lightgreen;
+  color: #56EB9B;
   display: none;
 }
 
 main {
   margin-top: 50px;
-  padding: 10px 20px;
+  padding: 10px 0 10px 167px;
 }
 
 main table {
@@ -63,6 +67,7 @@ main table th {
   width: -moz-fit-content;
   width: fit-content;
   height: 25px;
+  background-color: #F57AAA;
 }
 
 main table th:hover {
@@ -72,12 +77,12 @@ main table th:hover {
 
 main table th, main table td {
   padding: 5px;
-  background-color: #292929;
   border-radius: 5px;
 }
 
 main table td {
   font-weight: 300;
+  background-color: #F6D83E;
 }
 
 main div {
@@ -87,9 +92,10 @@ main div {
 main div select {
   margin-right: 30px;
   padding: 5px;
-  background-color: #292929;
-  border-radius: 5px;
-  color: whitesmoke;
+  border-color: transparent;
+  color: #2C2C2C;
+  height: 36px;
+  font-size: medium;
 }
 
 main div select option {
@@ -98,25 +104,31 @@ main div select option {
 
 main div select:hover {
   cursor: pointer;
+  background-color: #F6D83E;
+  border-radius: 20px;
+  padding: 5px 10px;
 }
 
 main div input {
   margin-right: 30px;
   width: 50px;
   padding: 5px;
-  background-color: #292929;
-  border-radius: 5px;
-  color: whitesmoke;
+  border-color: transparent;
+  color: #2C2C2C;
 }
 
 main div input:hover {
   cursor: pointer;
+  background-color: #F6D83E;
+  border-radius: 30px;
+  padding: 5px 10px;
 }
 
 main div button {
   padding: 5px;
   background-color: transparent;
-  color: whitesmoke;
+  border-color: transparent;
+  color: #2C2C2C;
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
   height: 36px;
@@ -125,9 +137,9 @@ main div button {
 
 main div button:hover {
   cursor: pointer;
-  background-color: #232323;
+  background-color: #F6D83E;
+  border-color: transparent;
   border-radius: 20px;
-  border: 1px solid whitesmoke;
   padding: 0 10px;
 }
 
@@ -140,14 +152,25 @@ main #recommend {
   margin: 10px 0;
   padding: 5px;
   background-color: transparent;
+  border-color: transparent;
   font-size: medium;
 }
 
 main #recommend:hover {
   cursor: pointer;
-  background-color: #232323;
+  background-color: #F6D83E;
   border-radius: 20px;
-  border: 1px solid whitesmoke;
   padding: 0 10px;
+}
+
+.background__bar {
+  position: absolute;
+  top: 0;
+}
+
+.background__dots {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
 }
 /*# sourceMappingURL=styles.css.map */
