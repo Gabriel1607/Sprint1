@@ -1,21 +1,21 @@
-Nombre,DMI,Hamburguesa
-Daniela Agudelo,5,7
-Elizabeth Aldana,5,10
-Yuilsi Alvarado,10,9
-Juan Camilo Bermeo,8,8
-Alejandro Brand,8,10
-Andres Burgos,7,8
-Laura Cobo,9,10
-Angelica Cruz,9,8
-Daniel Diaz,4,10
-Paula Dulcey,4,9
-Laura Duque,8,8
-Julian Enciso,9,10
-Jaime Fresneda,10,10
-Nathaly Mena,7,10
-Cristian Mendez,7,8
-Isabella Molina,5,10
-Gabriel Mora,8,9
-Erika Papamija,8,10
-Yoshiki Tsutsui,6,10
-Ingrid Valencilla,8,9
+Nombres,DMI,Hamburguesa,Helado,Videojuego,Feliz
+Daniela Agudelo,0.5,0.5,1,0.7,1
+Elizabeth Aldana,0.5,1,1,1,0.5
+Yuilsi Alvarado,1,0.9,0.5,0.1,1
+Juan Camilo Bermeo,0.8,0.8,0.7,0.1,0.6
+Alejandro Brand,0.8,1,1,0.7,0.5
+Andres Burgos,0.7,0.8,0.9,0.2,0.6
+Laura Cobo,0.9,1,1,0.1,0.7
+Angelica Cruz,0.9,0.8,1,1,1
+Daniel Diaz,0.4,1,0.7,0.7,0.1
+Paula Dulcey,0.4,0.9,0.5,0.7,1
+Laura Duque,0.8,0.8,0.8,0.5,0.5
+Julian Enciso,0.9,1,0.9,0.1,0.1
+Jaime Fresneda,1,1,0.7,1,0.3
+Nathaly Mena,0.7,1,0.9,1,0.2
+Cristian Mendez,0.7,0.8,0.7,1,0.8
+Isabella Molina,0.5,1,0.2,0.1,0.5
+Gabriel Mora,0.8,0.9,0.8,1,0.8
+Erika Papamija,0.8,1,0.8,0.4,0.8
+Yoshiki Tsutsui,0.6,1,1,1,1
+Ingrid Vallecilla,0.7,0.5,1,0.5,0.8

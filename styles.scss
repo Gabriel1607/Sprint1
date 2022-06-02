@@ -1,0 +1,199 @@
+$color-amarillo: #F6D83E;
+$color-rosado: #F57AAA;
+$color-verde: #56EB9B;
+$color-negro: #2C2C2C;
+
+html{
+    position: relative;
+}
+
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: white;
+    color: $color-negro;
+}
+
+header{
+    padding: 10px 0 10px 167px;
+
+    form{
+        margin: 20px 0 10px;
+
+        input{
+            padding: 5px;
+
+            background-color: transparent;
+            border-color: transparent;
+
+            color: $color-negro;
+
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+        }
+
+        input:hover{
+            cursor: pointer;
+            background-color: $color-amarillo;
+            border-radius: 20px;
+        }
+
+        #submitButton{
+            height: 36px;
+            font-size: medium;
+        }
+
+        #submitButton:hover{
+            border: 1px solid $color-amarillo;
+            padding: 0 10px;
+        }
+    }
+    
+    p{
+        margin: 50px 0 10px;
+    }
+
+    #confirm{
+        color: $color-verde;
+        display: none;
+    }
+}
+
+main{
+    margin-top: 50px;
+    padding: 10px 0 10px 167px;
+
+    table {
+        margin: 10px 0;
+
+        th {
+            font-size: large;
+            font-weight: 500;
+            padding: 5px;
+            width: fit-content;
+            height: 25px;
+
+            background-color: $color-rosado;
+        }
+        
+        th:hover{
+            cursor: pointer;
+            font-family: 'Fredoka One', cursive;
+        }
+        
+        th, td {
+            padding: 5px;
+            border-radius: 5px;
+        }
+        
+        td{
+            font-weight: 300;
+
+            background-color: $color-amarillo;
+        }
+    }
+
+    div{
+        margin: 10px 0;
+
+        select{
+            margin-right: 30px;
+
+            padding: 5px;
+
+            border-color: transparent;
+
+            color: $color-negro;
+
+            height: 36px;
+            font-size: medium;
+
+            option{
+                font-family: 'Raleway', sans-serif;
+            }
+        }
+
+        select:hover{
+            cursor: pointer;
+            background-color: $color-amarillo;
+            border-radius: 20px;
+            padding: 5px 10px;
+        }
+
+        input{
+            margin-right: 30px;
+
+            width: 50px;
+            
+            padding: 5px;
+
+            border-color: transparent;
+
+            color: $color-negro;
+        }
+
+        input:hover{
+            cursor: pointer;
+            background-color: $color-amarillo;
+            border-radius: 30px;
+            padding: 5px 10px;
+        }
+
+        button{            
+            padding: 5px;
+
+            background-color: transparent;
+            border-color: transparent;
+
+            color: $color-negro;
+
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+
+            height: 36px;
+            font-size: medium;
+        }
+
+        button:hover{
+            cursor: pointer;
+            background-color: $color-amarillo;
+            border-color: transparent;
+            border-radius: 20px;
+            padding: 0 10px;
+        }
+
+        p{
+            margin: 10px 0;
+        }
+    }
+    
+    #recommend{
+        height: 36px;
+        margin: 10px 0;
+        padding: 5px;
+        background-color: transparent;
+        border-color: transparent;
+        font-size: medium;
+    }
+
+    #recommend:hover{
+        cursor: pointer;
+            background-color: $color-amarillo;
+            border-radius: 20px;
+            padding: 0 10px;
+    }
+}
+
+.background{
+
+    &__bar{
+        position: absolute;
+        top: 0;
+    }
+
+    &__dots{
+        position: absolute;
+        right: 20px;
+        bottom: 30px;
+    }
+}
